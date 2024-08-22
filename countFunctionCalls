@@ -1,0 +1,6 @@
+#!/bin/bash
+# count the number of times, each file in src is discussed in index.html
+#
+# Jon Sporring, 2014/10/02
+
+ls -1 src/ | while read line; do number=`grep -e $line index.html | wc -l`; echo $number, $line; done
