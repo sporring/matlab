@@ -1,8 +1,12 @@
 function multiplaneSplit(src,dstPath)
 % MULTIPLANARSPLIT reslice a 3d images into orthogonal 2d planes
 %
-% src - the filename of the 3D multipage tiff image
-% dstPath - the path to a destination directory for 2d slices
+% Syntax
+%   multiplaneSplit(src,dstPath)
+%
+% Arguments
+%   src - the filename of the 3D multipage tiff image
+%   dstPath - the path to a destination directory for 2d slices
 %
 % Producing a directory of 2-dimensional images from a 3d images to be
 % segmented with RootPainter (https://github.com/Abe404/root_painter). The

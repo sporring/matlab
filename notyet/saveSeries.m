@@ -1,10 +1,14 @@
 function saveSeries(I,dstPath,name,ext)
 % SAVESERIES load a sequence of images
 %
-% I - a 3D volume image
-% dstPath - the destination folder
-% name - base of the resulting 2d filenames
-% ext - filename extension, e.g., 'tif'
+% Syntax
+%   saveSeries(I,dstPath,name,ext)
+%
+% Arguments
+%   I - a 3D volume image
+%   dstPath - the destination folder
+%   name - base of the resulting 2d filenames
+%   ext - filename extension, e.g., 'tif'
 %
 % Write a 3D image as a sequence of 2D images using imwrite. The 2D images
 % will be named <name>01.<ext>, <name>02.<ext>... with an appropriate

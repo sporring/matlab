@@ -1,9 +1,13 @@
 function I = loadSeries(srcPath,filePattern)
 % LOADSERIES load a sequence of images
 %
-% srcPath - the path to a directory containing a sequence of same-size and format 2D images
-% filePattern - the file pattern in src to read in lexicographical order
-% I - a 3D images
+% Syntax
+%   I = loadSeries(srcPath,filePattern)
+%
+% Arguments
+%   I - a 3D images
+%   srcPath - the path to a directory containing a sequence of same-size and format 2D images
+%   filePattern - the file pattern in src to read in lexicographical order
 %
 % Read a series of images in lexicographical order and return as a 3D
 % image.

@@ -1,8 +1,12 @@
 function L = combineThinStructures(I,J,K,sz)
 % COMBINETHINSTRUCTURES combine 3 equal size segmentations
 %
-% L, I, J, K - equal sized 3D images
-% sz - the radius of a sphere structure element
+% Syntax
+%   L = combineThinStructures(I,J,K,sz)
+%
+% Arguments
+%   L, I, J, K - equal sized 3D images
+%   sz - the radius of a sphere structure element
 %
 % Combine the 3D tomographies I, J, and K segmentations into a single
 % images L by 1. apply a tubular mask along the 3rd dimension, dilate I, J,

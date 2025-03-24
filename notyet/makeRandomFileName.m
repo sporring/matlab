@@ -1,10 +1,14 @@
 function fn = makeRandomFileName(path,pattern,n)
 % MAKERANDOMFILENAME make a random, non-existing filename in path
 %
-% fn - a non-existing filname
-% path - the directory to search in
-% pattern - the sprintf pattern for the filename and which takes a random integer 
-% n - the number of digits to use in the random integer pattern
+% Syntax
+%   makeRandomFileName(path,pattern,n)
+%
+% Arguments
+%   fn - a non-existing filname
+%   path - the directory to search in
+%   pattern - the sprintf pattern for the filename and which takes a random integer 
+%   n - the number of digits to use in the random integer pattern
 %
 % The function generates a non-existing filename by trying random n-digit
 % integers using sprintf. E.g., makeRandomFileName(".","test%d.tif",3) will
