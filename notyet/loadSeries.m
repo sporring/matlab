@@ -23,11 +23,11 @@ lst = dir(fullfile(srcPath,filePattern));
 I = imread(fullfile(lst(1).folder,lst(1).name));
 I = repmat(I,[1,1,length(lst)]);
 if VERBOSE
-    waitbar(0,"loadSeries: Reading images")
+    f = waitbar(0,"loadSeries: Reading images");
 end
 for i = 1:length(lst)
     I(:,:,i) = imread(fullfile(lst(ind(i)).folder,lst(ind(i)).name));
     if VERBOSE
-       waitbar(i/length(lst),"loadSeries: Reading images")
+       waitbar(i/length(lst),f,"loadSeries: Reading images")
     end
 end
