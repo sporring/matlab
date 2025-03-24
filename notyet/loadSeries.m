@@ -22,12 +22,13 @@ lst = dir(fullfile(srcPath,filePattern));
 [~,ind]=sort({lst.name});
 I = imread(fullfile(lst(1).folder,lst(1).name));
 I = repmat(I,[1,1,length(lst)]);
+s = 20/length(lst);
 if VERBOSE
-    waitbar(0,"loadSeries: Reading images");
+    waitbarTxt(0,s*length(lst),"loadSeries: Reading images");
 end
 for i = 1:length(lst)
     I(:,:,i) = imread(fullfile(lst(ind(i)).folder,lst(ind(i)).name));
     if VERBOSE
-       waitbar(i/length(lst));
+       waitbarTxt(s*i);
     end
 end
