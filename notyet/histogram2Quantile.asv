@@ -1,0 +1,41 @@
+function q = histogram2Quantile(binEdges,binCounts,p)
+% HISTOGRAM2QUANTILE calcualte the p'th quantile from histogram bins and edges
+%
+% Syntax
+%   seriesToMultipageTiff(srcPath,filePattern,dst)
+%
+% Arguments
+%   srcPath - the path to a directory containing a sequence of same-size and format 2d images
+%   filePattern - the file pattern in src to read in lexicographical order
+%   dst - the path to a destination multipage tiff file
+%
+% This is a tool to convert a sequence of 2d images into a multipage tiff.
+%
+% 2025/03/18, Jon Sporring
+
+
+
+% https://se.mathworks.com/matlabcentral/answers/1909915-getting-a-percentile-from-a-histogram
+%samplesize = 1000;
+%targetpctile = 65;
+%lsd = randn(samplesize,1); % large set of normal(0,1) data
+%binedges = -10:0.01:10;    % make sure this covers the whole data range
+%bincounts = histcounts(lsd,binedges);
+
+% t = randn(1,1000);
+% binWidth = 0.01;
+% binEdges = (min(t)-binWidth):0.01:(max(t)+binWidth);
+% binCounts = histcounts(t,binEdges);
+% histogram2Quantile(binEdges,binCounts,p);
+
+samplesize = sum(binCounts);
+bincumpcts = cumsum(binCounts)/samplesize;
+relevantbin = find(bincumpcts>p,1);
+% Note that the relevant bin in binedges goes from binedges(relevantbin) to binedges(relevantbin+1)
+if relevantbin > 1
+    startxat = binEdges(relevantbin);
+    binsizex = binEdges(relevantbin+1) - startxat;
+    startpat = bincumpcts(relevantbin-1);
+    binsizep = bincumpcts(relevantbin) - startpat;
+    Vq = startxat + binsizex * (p - startpat) / binsizep;
+end
