@@ -23,7 +23,7 @@ end
 n = 1+floor(log10(size(I,3)));
 s = min(50,size(I,3))/size(I,3);
 if VERBOSE
-    waitbarTxt(0,s*size(I,3),"loadSeries: Reading images");
+    waitbarTxt(0,s*size(I,3),sprintf("saveSeries: %s",name));
 end
 for i = 1:size(I,3)
     imwrite(I(:,:,i),fullfile(dstPath,sprintf('%s%0*d.%s',name,(i<0)+n,i,ext)));
