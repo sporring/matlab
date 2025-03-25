@@ -2,7 +2,7 @@ function I = loadSeries(srcPath,filePattern,VERBOSE)
 % LOADSERIES load a sequence of images
 %
 % Syntax
-%   I = loadSeries(srcPath,filePattern)
+%   I = loadSeries(srcPath,filePattern,VERBOSE)
 %
 % Arguments
 %   I - a 3D images
@@ -22,7 +22,7 @@ lst = dir(fullfile(srcPath,filePattern));
 [~,ind]=sort({lst.name});
 I = imread(fullfile(lst(1).folder,lst(1).name));
 I = repmat(I,[1,1,length(lst)]);
-s = 20/length(lst);
+s = min(50,length(lst))/length(lst);
 if VERBOSE
     waitbarTxt(0,s*length(lst),"loadSeries: Reading images");
 end
