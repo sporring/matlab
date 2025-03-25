@@ -7,13 +7,13 @@ function q = histogram2Quantile(binEdges,binCounts,p)
 % Arguments
 %   binEdges - the left-edges of the bins including the last right edge
 %   binCounts - the counts within each bin
-%   p - the quantile to estimate
+%   p - the quantiles to estimate
 %
 % Estimate the p'th quantile from histogram values. For example,
 %
 % t = randn(1,1000);
 % binWidth = 0.01;
-% binEdges = (min(t)-binWidth):0.01:(max(t)+binWidth);
+% binEdges = (min(t)-binWidth):binWidth:(max(t)+binWidth);
 % binCounts = histcounts(t,binEdges);
 % p = 0.1
 % q = histogram2Quantile(binEdges,binCounts,p);
@@ -22,6 +22,12 @@ function q = histogram2Quantile(binEdges,binCounts,p)
 % Adapted from https://se.mathworks.com/matlabcentral/answers/1909915-getting-a-percentile-from-a-histogram
 %
 % 2025/03/25, Jon Sporring
+
+q = arrayfun(@(a) helper(binEdges,binCounts,a),p);
+
+end
+
+function q = helper(binEdges,binCounts,p)
 
 cf = cumsum(binCounts)/sum(binCounts);
 i = find(cf>=p,1);
@@ -33,4 +39,5 @@ if i > 1
     q = x0 + dx * (p - f0) / df;
 else
     q = binEdge(1);
+end
 end
