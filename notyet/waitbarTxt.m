@@ -41,9 +41,9 @@ if nargin > 2
 end
 str = sprintf("%s%s%c %s",repmat('*',[1,floor(i)]),repmat(' ',[1,ceil(n_-i)]),'|',msg_);
 if str ~= str_
-    delStr = repmat('\b',[1,strlength(str_)]);
+    fprintf(repmat('\b',[1,strlength(str_)]));
     str_ = str;
-    fprintf('%s%s',delStr,str_);
+    fprintf(str_);
 end
 if i == n_
     fprintf("\n")
