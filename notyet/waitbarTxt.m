@@ -39,9 +39,12 @@ end
 if nargin > 2
     msg_ = msg;
 end
-fprintf(repmat('\b',[1,strlength(str_)]));
-str_ = sprintf("%s%s%c %s",repmat('*',[1,floor(i)]),repmat(' ',[1,ceil(n_-i)]),'|',msg_);
-fprintf("%s",str_)
+str = sprintf("%s%s%c %s",repmat('*',[1,floor(i)]),repmat(' ',[1,ceil(n_-i)]),'|',msg_);
+if str ~= str_
+    delStr = repmat('\b',[1,strlength(str_)]);
+    str_ = str;
+    fprintf('%s%s',delStr,str_);
+end
 if i == n_
     fprintf("\n")
     clear str_ n_ msg_
