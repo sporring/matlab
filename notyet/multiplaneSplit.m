@@ -1,12 +1,13 @@
-function multiplaneSplit(src,dstPath)
+function multiplaneSplit(src,dstPath,VERBOSE)
 % MULTIPLANARSPLIT reslice a 3d images into orthogonal 2d planes
 %
 % Syntax
-%   multiplaneSplit(src,dstPath)
+%   multiplaneSplit(src,dstPath,VERBOSE)
 %
 % Arguments
 %   src - the filename of the 3D multipage tiff image
 %   dstPath - the path to a destination directory for 2d slices
+%   VERBOSE - optional verbose flag. If true, then will show a waitbar window
 %
 % Producing a directory of 2-dimensional images from a 3d images to be
 % segmented with RootPainter (https://github.com/Abe404/root_painter). The
@@ -19,8 +20,12 @@ function multiplaneSplit(src,dstPath)
 %
 % 2025/03/18, Jon Sporring
 
+if nargin < 5
+    VERBOSE = false;
+end
+
 I = tiffreadVolume(src);
 [~,name,~] = fileparts(src);
-saveSeries(I,dstPath,name+"_xy","tif");
-saveSeries(permute(I,[2,3,1]),dstPath,name+"_yz","tif");
-saveSeries(permute(I,[3,1,2]),dstPath,name+"_zx","tif");
+saveSeries(I,dstPath,name+"_xy",".tif",VERBOSE);
+saveSeries(permute(I,[2,3,1]),dstPath,name+"_yz",".tif",VERBOSE);
+saveSeries(permute(I,[3,1,2]),dstPath,name+"_zx",".tif",VERBOSE);

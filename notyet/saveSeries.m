@@ -1,18 +1,18 @@
-function saveSeries(I,dstPath,name,ext,VERBOSE)
+function saveSeries(I,dstPath,prefix,suffix,VERBOSE)
 % SAVESERIES load a sequence of images
 %
 % Syntax
-%   saveSeries(I,dstPath,name,ext,VERBOSE)
+%   saveSeries(I,dstPath,prefix,suffix,VERBOSE)
 %
 % Arguments
 %   I - a 3D volume image
 %   dstPath - the destination folder
-%   name - base of the resulting 2d filenames
-%   ext - filename extension, e.g., 'tif'
+%   prefix - base of the resulting 2d filenames
+%   suffix - filename extension, e.g., '.tif'
 %   VERBOSE - optional verbose flag. If true, then will show a waitbar window
 %
 % Write a 3D image as a sequence of 2D images using imwrite. The 2D images
-% will be named <name>01.<ext>, <name>02.<ext>... with an appropriate
+% will be named <prefix>01<suffix>, <prefix>02<suffix>... with an appropriate
 % number of preceding zeros to ensure lexicographical order.
 %
 % 2025/03/18, Jon Sporring
@@ -23,11 +23,12 @@ end
 n = 1+floor(log10(size(I,3)));
 s = min(50,size(I,3))/size(I,3);
 if VERBOSE
-    waitbarTxt(0,s*size(I,3),sprintf("saveSeries: %s",name));
+    waitbarTxt(0,s*size(I,3),sprintf("saveSeries"));
 end
 for i = 1:size(I,3)
-    imwrite(I(:,:,i),fullfile(dstPath,sprintf('%s%0*d.%s',name,(i<0)+n,i,ext)));
+    name = sprintf('%s%0*d%s',prefix,(i<0)+n,i,suffix));
+    imwrite(I(:,:,i),fullfile(dstPath,name));
     if VERBOSE
-       waitbarTxt(s*i);
+        waitbarTxt(s*i,s*size(I,3),sprintf("saveSeries: %s",name));
     end
 end
