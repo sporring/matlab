@@ -26,7 +26,7 @@ if VERBOSE
     waitbarTxt(0,s*size(I,3),sprintf("saveSeries"));
 end
 for i = 1:size(I,3)
-    name = sprintf('%s%0*d%s',prefix,(i<0)+n,i,suffix));
+    name = sprintf('%s%0*d%s',prefix,(i<0)+n,i,suffix);
     imwrite(I(:,:,i),fullfile(dstPath,name));
     if VERBOSE
         waitbarTxt(s*i,s*size(I,3),sprintf("saveSeries: %s",name));
