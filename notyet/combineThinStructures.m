@@ -19,6 +19,7 @@ if nargin < 5
     VERBOSE = false;
 end
 
+%{
 if VERBOSE
     waitbarTxt(0,4,"combineThinStructures: Masking");
 end
@@ -28,6 +29,7 @@ Mask = repmat(Mask,[1,1,size(I,3)]);
 I = Mask & I;
 J = Mask & J;
 K = Mask & K;
+%}
 if sz > 0
     se = strel("sphere",sz);
 end
