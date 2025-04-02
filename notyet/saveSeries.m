@@ -20,6 +20,9 @@ function saveSeries(I,dstPath,prefix,suffix,VERBOSE)
 if nargin < 5
     VERBOSE = false;
 end
+if ~exist(dstPath,'dir')
+    mkdir(dstPath)
+end
 n = 1+floor(log10(size(I,3)));
 s = min(50,size(I,3))/size(I,3);
 if VERBOSE

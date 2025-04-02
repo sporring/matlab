@@ -38,6 +38,6 @@ if i > 1
     df = cf(i) - f0;
     q = x0 + dx * (p - f0) / df;
 else
-    q = binEdge(1);
+    q = binEdges(1);
 end
 end
