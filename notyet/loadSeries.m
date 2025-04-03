@@ -24,11 +24,12 @@ I = imread(fullfile(lst(1).folder,lst(1).name));
 I = repmat(I,[1,1,length(lst)]);
 s = min(50,length(lst))/length(lst);
 if VERBOSE
-    waitbarTxt(0,s*length(lst),"loadSeries: Reading images");
+    waitbarTxt(0,s*length(lst),sprintf("loadSeries: %s",srcPath));
 end
 for i = 1:length(lst)
     I(:,:,i) = imread(fullfile(lst(ind(i)).folder,lst(ind(i)).name));
     if VERBOSE
-       waitbarTxt(s*i,s*length(lst),sprintf("loadSeries: %s",lst(ind(i)).name));
+        %waitbarTxt(s*i,s*length(lst),sprintf("loadSeries: %s",lst(ind(i)).name));
+        waitbarTxt(s*i);
     end
 end

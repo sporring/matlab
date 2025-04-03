@@ -26,12 +26,12 @@ end
 n = 1+floor(log10(size(I,3)));
 s = min(50,size(I,3))/size(I,3);
 if VERBOSE
-    waitbarTxt(0,s*size(I,3),sprintf("saveSeries"));
+    waitbarTxt(0,s*size(I,3),sprintf("saveSeries: %s", dstPath));
 end
 for i = 1:size(I,3)
     name = sprintf('%s%0*d%s',prefix,(i<0)+n,i,suffix);
     imwrite(I(:,:,i),fullfile(dstPath,name));
     if VERBOSE
-        waitbarTxt(s*i,s*size(I,3),sprintf("saveSeries: %s",name));
+        waitbarTxt(s*i);
     end
 end
