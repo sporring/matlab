@@ -39,7 +39,7 @@ end
 if nargin > 2
     msg_ = msg;
 end
-if n_ == 0 %% assume that this is a restart after a cancellation
+if i == 0 %% assume that this is a restart after a cancellation
     str_ = "";
 end
 str = sprintf("%s%s%c %s",repmat('*',[1,floor(i)]),repmat(' ',[1,ceil(n_-i)]),'|',msg_);
