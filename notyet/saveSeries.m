@@ -23,7 +23,7 @@ Defaults(1:nargin-2) = varargin;
 [VERBOSE, prefix, suffix,SUPPRESSWARNING] = deal(Defaults{:});
 
 if exist(dstPath,'dir')
-    if ~SUPPRESSWARNING
+    if SUPPRESSWARNING
         warning("saveSeries: %s exists",dstPath)
     end
 else

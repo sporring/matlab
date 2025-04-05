@@ -26,6 +26,6 @@ end
 
 I = tiffreadVolume(src);
 [~,name,~] = fileparts(src);
-saveSeries(I,dstPath,name+"_xy",".tif",VERBOSE);
-saveSeries(permute(I,[2,3,1]),dstPath,name+"_yz",".tif",VERBOSE);
-saveSeries(permute(I,[3,1,2]),dstPath,name+"_zx",".tif",VERBOSE);
+saveSeries(I,dstPath,VERBOSE,name+"_xy",".tif");
+saveSeries(permute(I,[2,3,1]),dstPath,VERBOSE,name+"_yz",".tif",false);
+saveSeries(permute(I,[3,1,2]),dstPath,VERBOSE,name+"_zx",".tif",false);
