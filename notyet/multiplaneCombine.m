@@ -2,7 +2,7 @@ function J = multiplaneCombine(srcPath,fun,dstPath,varargin)
 % MULTIPLANECOMBINE combine orthogonal sliced 2d series into a single 3D image
 %
 % Syntax
-%   J = multiplaneCombine(srcPath,fun,dstPath,VERBOSE,,prefix,suffix)
+%   J = multiplaneCombine(srcPath,fun,dstPath,VERBOSE,prefix,suffix)
 %
 % Arguments
 %   J - the combined image also saved in dstPath
