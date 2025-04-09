@@ -34,7 +34,6 @@ else
     for i = 1:length(lst)
         I(:,:,i) = imread(fullfile(lst(ind(i)).folder,lst(ind(i)).name));
         if VERBOSE
-            %waitbarTxt(s*i,s*length(lst),sprintf("loadSeries: %s",lst(ind(i)).name));
             waitbarTxt(s*i);
         end
     end

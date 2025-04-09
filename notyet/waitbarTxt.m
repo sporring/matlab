@@ -34,7 +34,7 @@ if isempty(str_)
     str_ = "";
 end
 if nargin > 1
-    n_ = n;
+    n_ = round(n);
 end
 if nargin > 2
     msg_ = msg;
@@ -42,13 +42,13 @@ end
 if i == 0 %% assume that this is a restart after a cancellation
     str_ = "";
 end
-str = sprintf("%s%s%c %s",repmat('*',[1,floor(i)]),repmat(' ',[1,ceil(n_-i)]),'|',msg_);
+str = sprintf("%s%s%c %s",repmat('*',[1,floor(i)]),repmat(' ',[1,n_-floor(i)]),'|',msg_);
 if str ~= str_
     fprintf(repmat('\b',[1,strlength(str_)]));
     str_ = str;
     fprintf(str_);
 end
-if i == n_
+if abs(i - n_) < eps*1e3
     fprintf("\n")
     clear str_ n_ msg_
 end
