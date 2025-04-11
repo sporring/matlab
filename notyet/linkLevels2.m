@@ -1,4 +1,4 @@
-function [map, newlinkCell] =  linkLevels2(linkCell, top, bottom);
+function [map, newlinkCell] =  linkLevels2(linkCell, top, bottom)
 
 % function [map, linkCell] =  linkLevels2(linkCell, top, bottom);
 %
@@ -18,7 +18,7 @@ if(top > bottom)
 else
   row = bottom;
   col = top;
-end;
+end
 
 % Note row > bottom always
 
@@ -30,7 +30,7 @@ if( isempty(linkCell{row,col}) )
   while(isempty(linkCell{cur_row,col}))
     cur_row = cur_row -1;
   end
-  for i=cur_row+1:row,
+  for i=cur_row+1:row
     linkCell{i,col} =  linkCell{i,i-1} * linkCell{i-1,col};
   end
 end

@@ -19,13 +19,11 @@ Vval = abs(size(I,1)+1+size(I,2)+1);
 while a < size(C,2)
   b = C(2,a)+a;
   % CONTOUR USES X,Y INSTEAD OF ROW,COL
-  [minval,minpos] = min(sum(abs(C(:,a+1:b)-[X(2);X(1)]*ones(1,b-a))));
+  [minval,~] = min(sum(abs(C(:,a+1:b)-[X(2);X(1)]*ones(1,b-a))));
   if minval < Vval
     V = C(:,a+1:b);
     Vval = minval;
   end
-%  disp([minval, minpos, C(:,a+minpos)',sum(abs(C(:,a+minpos)-[X(2);X(1)]))]);
-%  disp([[a;b],C(:,a:a+2)]);
   a=b+1;
 end
 V = flipud(V);

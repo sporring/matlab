@@ -16,7 +16,7 @@ for n = 1:size(x,1)
   % This inner loop can be implemented faster, but then again, if B is large
   % a more sophisticate search should be implemented.
   for m = 1:size(x,2)
-    [y,i(n,m)] = min(abs(B(1:size(B,2)-1)-x(n,m)));
+    [~,i(n,m)] = min(abs(B(1:size(B,2)-1)-x(n,m)));
   end
   i(n,:) = i(n,:) - ((B(1,i(n,:))>x(n,:)) & (i(n,:)>1));
 end

@@ -1,8 +1,8 @@
-function borders = boundaries(f);
+function borders = boundaries(f)
 
 % borders = boundaries(f);
 
-[m n] = size(f);
+[m, n] = size(f);
  
 RowDown = (f(1:m-1,:) ~= f(2:m,:));
 RowDown(m,:) = zeros(1,n);

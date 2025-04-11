@@ -1,7 +1,7 @@
 function J = quick_linear_diffusion(I, time, order)
 
-v = 2.^[0:order];
-invA = inv((ones(order+1,1)*v).^([0:order]'*ones(1,order+1)));
+v = 2.^(0:order);
+invA = inv((ones(order+1,1)*v).^((0:order)'*ones(1,order+1)));
 
 J = zeros(size(I));
 for i = 1:size(invA,1)

@@ -19,7 +19,7 @@ a = list_first(C);
 while a > 0
   V = flipud(list_get(C,a));
 
-  if exist('Ix') & exist('Iy') & (size(V,2) > 1)
+  if exist('Ix') && exist('Iy') & (size(V,2) > 1)
     dx = [interpolate(Ix,V(:,1),'bilinear'),interpolate(Iy,V(:,1),'bilinear')];
     if det([dx; (V(:,2)-V(:,1))']) < 0
       V = fliplr(V);

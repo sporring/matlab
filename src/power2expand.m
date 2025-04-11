@@ -1,4 +1,4 @@
-function J = power2expand(I);
+function J = power2expand(I)
 %POWER2EXPAND Expand image to nearest higher power of 2 using imresize
 %
 %       J = power2expand(I)
@@ -13,7 +13,7 @@ function J = power2expand(I);
 
 m = 2^floor(log2(size(I,1)));
 n = 2^floor(log2(size(I,2)));
-if m < size(I,1) | n < size(I,2)
+if m < size(I,1) || n < size(I,2)
   if m < size(I,1)
     m = 2*m;
   end

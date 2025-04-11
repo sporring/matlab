@@ -19,22 +19,22 @@ if(size(X,1) < 2)
   X = [X; ones(1,size(X,2))];
 end
 
-if strcmp(lower(method),'nearest') 
+if strcmpi(method,'nearest') 
   X = round(X);
   for i = 1:size(X,2)
     f(i) = F(round(X(1,i)), round(X(2,i)));
   end
 else 
-  if strcmp(lower(method),'bilinear') 
+  if strcmpi(method,'bilinear') 
     F2 = zeros(size(F)+1);
     F2(1:size(F,1),1:size(F,2)) = F;
     A = floor(X);
     B = X-A;
     for i = 1:size(X,2)
-      f(i) = [1-B(1,i),B(1,i)]*F2(A(1,i)+[0:1],A(2,i)+[0:1])*[1-B(2,i);B(2,i)];
+      f(i) = [1-B(1,i),B(1,i)]*F2(A(1,i)+(0:1),A(2,i)+(0:1))*[1-B(2,i);B(2,i)];
     end
   else 
-    if strcmp(lower(method),'bicubic') 
+    if strcmpi(method,'bicubic') 
       error(['The method ''' method ''' has not been implemented yet']);
     else
       error(['The method ''' method ''' is not recognized']);

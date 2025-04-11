@@ -6,7 +6,7 @@ function filesplit(filename,max_size)
   end
   fr = fopen(filename,'r');
   if fr ~= -1
-    count = max_size
+    count = max_size;
     i = 1;
     while count == max_size
       [t,count] = fread(fr,max_size,'uchar');

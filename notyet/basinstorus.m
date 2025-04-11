@@ -1,4 +1,4 @@
-function [basins, minima] = basins(f);
+function [basins, minima] = basinstorus(f)
 
 % BASINS   Catchment basins (influenze zones) on Morse functions, Pixelbased
 %   [bas, minima] = basins(f)
@@ -18,7 +18,7 @@ function [basins, minima] = basins(f);
 
 global  bestDiff bestDirection diff  % Used by update_indici
 
-[m n] = size(f);
+[m, n] = size(f);
 Size = [m n];
 mn = m*n;
 
@@ -106,28 +106,28 @@ bestDirection(index2) = index -m + mn;
 
 % top left corner
 diff = (f(1,1) - f(m,n)) * metric;
-if diff > bestDiff(1),
+if diff > bestDiff(1)
   bestDiff(1) = diff;
   bestDirection(1) = mn;
-end;
+end
 
 % bottom right corner
 diff = - diff;
-if diff > bestDiff(mn),
+if diff > bestDiff(mn)
   bestDiff(mn) = diff;
   bestDirection(mn) = 1;
 end
 
 % top right corner
 diff = (f(1,n) - f(m,1)) * metric;
-if diff > bestDiff(mn - m + 1),
+if diff > bestDiff(mn - m + 1)
   bestDiff(mn - m + 1) = diff;
   bestDirection(mn - m + 1) = m;
 end  
 
 % bottom left corner
 diff = -diff;
-if diff > bestDiff(m),
+if diff > bestDiff(m)
   bestDiff(m) = diff;
   bestDirection(m) = mn - m + 1;
 end
@@ -149,8 +149,8 @@ bestDirMatrix = sparse(1:mn, bestDirection, values, mn, mn);
 
 
 
-while ~isempty(index),
-  [index dummy] = find(bestDirMatrix(:,index));
+while ~isempty(index)
+  [index, ~] = find(bestDirMatrix(:,index));
   basins(index) = basins(bestDirection(index));
 end  
 
@@ -158,7 +158,7 @@ end
 % offset is the sum of 
 % the row number and
 % the correct multiple of column length that is m (nr of rows)
-function update_indici(offset);
+function update_indici(offset)
 
 global bestDiff bestDirection diff % Used by update_indici
 

@@ -6,6 +6,31 @@ This is a collection of Matlab functions programmed by a number of people at DIK
 
 Most functions are carefully documented using embedded comments in the beginning of the file. Hence you may learn more about the functions by viewing the M-code. The comments use the standard Matlab style: the first line is the function head followed by the help section used by the Matlab help command. An example of a properly written help section is given in [scale.m](src/scale.m). The first line contains a one-line description, followed by an empty line, and ending with the body of the help text.
 
+### Multiplanar image support functions
+
+These functions have been developed to extend [Root Painter](https://github.com/Abe404/root_painter) with axis aligned multiplanar training and prediction.
+
+| File | Description | Date | Author |
+| --- | --- | --- | --- |
+| [waitbarTxt](src/waitbarTxt.m) || Apr 2025 | Jon Sporring |
+| [multiplaneCombine.m](src/multiplaneCombine.m) || Apr 2025 | Jon Sporring |
+| [loadSeries.m](src/loadSeries.m) || Apr 2025 | Jon Sporring |
+| [splitSeries.m](src/splitSeries.m) || Apr 2025 | Jon Sporring |
+| [combineCoarseStructures.m](src/combineCoarseStructures.m) || Apr 2025 | Jon Sporring |
+|| [addAnnotation.m](src/addAnnotation.m) | Apr 2025 | Jon Sporring |
+| [bestOfTwo.m](src/bestOfTwo.m) || Apr 2025 | Jon Sporring |
+| [saveSeries.m](src/saveSeries.m) || Apr 2025 | Jon Sporring |
+| [multiplaneSplit.m](src/multiplaneSplit.m) || Apr 2025 | Jon Sporring |
+| [randomSample.m](src/randomSample.m) || Apr 2025 | Jon Sporring |
+| [histogram2Quantile.m](src/histogram2Quantile.m) || Apr 2025 | Jon Sporring |
+| [combineThinStructures.m](src/combineThinStructures.m) || Apr 2025 | Jon Sporring |
+|| [makeRandomFileName.m](src/makeRandomFileName.m) | Apr 2025 | Jon Sporring |
+| [seriesToMultipageTiff.m](src/seriesToMultipageTiff.m) || Apr 2025 | Jon Sporring |
+|| [multipageTiffToSeries.m](src/multipageTiffToSeries.m) | Apr 2025 | Jon Sporring |
+|| [trim.m](src/trim.m) | Apr 2025 | Jon Sporring |
+| [resample3.m](src/resample3.m) || Apr 2025 | Jon Sporring |
+| [mul.m](src/mul.m) || Apr 2025 | Jon Sporring |
+
 ### Linear Scale-Space functions
 
 These functions implement the Gaussian scale-space in various ways.

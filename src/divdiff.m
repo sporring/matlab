@@ -27,8 +27,6 @@ for i = 1:max(size(c))
 end
 
 D = f(t,1);
-%disp([999.9999 x(t)'])
-%disp([999.9999 D'])
 for k = 1:size(D,1)-1
   for i = size(D,1)-k:-1:1
     dx = x(t(i+k))-x(t(i));
@@ -38,7 +36,6 @@ for k = 1:size(D,1)-1
       D(i+k) = f(t(i),k+1);
     end
   end
-%  disp([dx, D'])
 end
 
 t = x(t);

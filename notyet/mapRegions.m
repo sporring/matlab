@@ -1,4 +1,4 @@
-function result = mapRegions(map,regions);
+function result = mapRegions(map,regions)
 
 % result = mapRegions(map,regions);
 % mapRegions finds new values for regions using the map.

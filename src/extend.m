@@ -1,4 +1,4 @@
-function J = extend(I,M,N);
+function J = extend(I,M,N)
 %EXTEND Periodic flip-extension of matrices
 %       
 %       J = extend(I,M,N)
@@ -20,10 +20,10 @@ Ilrud = fliplr(Iud);
 J = zeros(M*size(I,1),N*size(I,2));
 for n = 1:N
   for m = 1:M
-    r = (m-1)*size(I,1)+[1:size(I,1)];
-    c = (n-1)*size(I,2)+[1:size(I,2)];
+    r = (m-1)*size(I,1)+(1:size(I,1));
+    c = (n-1)*size(I,2)+(1:size(I,2));
     
-    if rem(n,2) & rem(m,2)
+    if rem(n,2) && rem(m,2)
       J(r,c) = I;
     else
       if rem(n,2)

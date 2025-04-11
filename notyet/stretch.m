@@ -1,4 +1,4 @@
-function J = stretch(I,l,u);
+function J = stretch(I,l,u)
 %STRETCH Do a linear re-mapping of the values in a matrix
 %       
 %       J = stretch(I,l,u)

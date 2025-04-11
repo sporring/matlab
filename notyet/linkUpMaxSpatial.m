@@ -1,4 +1,4 @@
-function linkMatrix = linkUpMaxSpatial(top, bottom);
+function linkMatrix = linkUpMaxSpatial(top, bottom)
 
 % linkMatrix = linkUpMaxSpatial(top, bottom);
 
@@ -18,11 +18,11 @@ overlap = sparse(maxtop, maxbottom);
 % index = row# + (col#-1) * rowLength 
 indexInOverlap = top + (bottom-1) * maxtop;
 % reshape to vector
-indexInOverlap = reshape(indexInOverlap, 1, prod(size(indexInOverlap)));
+indexInOverlap = reshape(indexInOverlap, 1, numel(indexInOverlap));
 
 for i=indexInOverlap
   overlap(i) = overlap(i) + 1;
-end;
+end
 
 
 % Select the maximum in each column

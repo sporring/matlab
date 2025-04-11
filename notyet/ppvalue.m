@@ -16,7 +16,7 @@ function value = ppvalue(x, j, B, C)
 
 value = zeros(size(x,1), size(x,2));
 i = interval(x, B);
-exponent = [0:(size(C,1)-1-j)];
+exponent = 0:(size(C,1)-1-j);
 
 for n = 1:size(x,1)
   for m = 1:size(x,2)
