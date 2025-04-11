@@ -23,13 +23,20 @@ These functions have been developed to extend [Root Painter](https://github.com/
 | [saveSeries.m](src/saveSeries.m) |load a sequence of images| Apr 2025 | Jon Sporring |
 | [seriesToMultipageTiff.m](src/seriesToMultipageTiff.m) |read a sequence of images and save as a multipage tiff| Apr 2025 | Jon Sporring |
 | [splitSeries.m](src/splitSeries.m) |save an image into 3 orthogonal series| Apr 2025 | Jon Sporring |
+
+### General image analysis and supporting functions
+
+These functions have are general purpose.
+
+| File | Description | Date | Author |
 | --- | --- | --- | --- |
+| [extend.m](src/extend.m) |Periodic flip-extension of matrices|Sep 1996| Jon Sporring |
 | [makeRandomFileName.m](src/makeRandomFileName.m) |make a random, non-existing filename in path| Apr 2025 | Jon Sporring |
-| [randomSample.m](src/randomSample.m) |generate random samples distributed similarly to a histogram| Apr 2025 | Jon Sporring |
-| [histogram2Quantile.m](src/histogram2Quantile.m) |calcualte the p'th quantile from histogram bins and edges| Apr 2025 | Jon Sporring |
 | [trim.m](src/trim.m) |return the smallest axis aligne cube containing all true values in I| Apr 2025 | Jon Sporring |
 | [resample3.m](src/resample3.m) |resample I to become the size sz.| Apr 2025 | Jon Sporring |
 | [mul.m](src/mul.m) |multiply 3 dimensional images in the coordinates of the first argument| Apr 2025 | Jon Sporring |
+| [sign2.m](src/sign2.m) |Alternative sign calculation.|Jan 1994| Jon Sporring |
+| [stretch.m](src/stretch.m) |Do a linear re-mapping of the values in a matrix|Jan 1997| Jon Sporring |
 | [waitbarTxt](src/waitbarTxt.m) |print a wait progress bar in text| Apr 2025 | Jon Sporring |
 
 ### Linear Scale-Space functions
@@ -95,7 +102,7 @@ These functions were part of Joachim Weickert's course May 1998 at DIKU. Some of
 | [snake.m](src/snake.m) | Implementation of Kass's et al. snake | Dec 2003 | Jon Sporring |
 | [snakeTest.m](src/snakeTest.m) | A demonstration program for snake.m | Dec 2003 | Jon Sporring |
 
-### Statistical Distributions
+### Statistical Distributions and sources
 
 Function to produce various parameterized distributions.
 
@@ -105,10 +112,18 @@ Function to produce various parameterized distributions.
 | [binomial.m](src/binomial.m) | The binomial distribution | May 1997 | Jon Sporring |
 | [chi.m](src/chi.m) | The X^2 distribution | May 1997 | Jon Sporring |
 | [exponential.m](src/exponential.m) | The exponential distribution | May 1997 | Jon Sporring |
+| [fbm_image.m](src/fbm_image.m) | Generate a randomly chosen Fractal Brownian Motion image. | Jan 1997 | Jon Sporring |
 | [geometric.m](src/geometric.m) | The geometric distribution | May 1997 | Jon Sporring |
+| [histogram2Quantile.m](src/histogram2Quantile.m) |calcualte the p'th quantile from histogram bins and edges| Apr 2025 | Jon Sporring |
 | [lognormal.m](src/lognormal.m) | The log-normal distribution | May 1997 | Jon Sporring |
+| [makeTube.m](src/makeTube.m) |generate a 3D image of a filled tube with rounded endings|Nov 2023| Jon Sporring |
+| [makeRandomTubes.m](src/makeRandomTubes.m) |generate a 3D image with non-overlapping random tubes|Nov 2023| Jon Sporring |
 | [normal.m](src/normal.m) | The normal or Gaussian distribution | May 1997 | Jon Sporring |
 | [poisson.m](src/poisson.m) | The Poisson distribution | May 1997 | Jon Sporring |
+| [RandomIsingImage.m](src/RandomIsingImage.m) | Generate a random image under the Ising Gibbs Random Field model. | Dec 2003 | Jon Sporring |
+| [randomSample.m](src/randomSample.m) |generate random samples distributed similarly to a histogram| Apr 2025 | Jon Sporring |
+| [randUnit3.m](src/randUnit3.m) |niformly and randomly distributed points on a sphere|Nov 2023| Jon Sporring |
+| [rnd_paste_image.m](src/rnd_paste_image.m) | Generate a random image of pasted sub-images. | Jan 1997 | Jon Sporring |
 
 ### Statistical Estimations
 
@@ -125,14 +140,6 @@ Function to produce various parameterized distributions.
 | [emGaussianMixture.m](src/emGaussianMixture.m) | Expectation Maximization estimation for a Mixture of Gaussian Model | Nov 2003 | Jon Sporring |
 | [emGaussianMixtureTest.m](src/emGaussianMixtureTest.m) | A demo script for emGaussianMixture.m | Nov 2003 | Jon Sporring |
 
-### Stochastic Images
-
-| File | Description | Date | Author |
-| --- | --- | --- | --- |
-| [fbm_image.m](src/fbm_image.m) | Generate a randomly chosen Fractal Brownian Motion image. | Jan 1997 | Jon Sporring |
-| [rnd_paste_image.m](src/rnd_paste_image.m) | Generate a random image of pasted sub-images. | Jan 1997 | Jon Sporring |
-| [RandomIsingImage.m](src/RandomIsingImage.m) | Generate a random image under the Ising Gibbs Random Field model. | Dec 2003 | Jon Sporring |
-
 ### Information Theory and Multifractals
 
 | File | Description | Date | Author |
@@ -142,6 +149,7 @@ Function to produce various parameterized distributions.
 | [information.m](src/information.m) | Calculate the generalized-entropy of a distribution. | May 1997 | Jon Sporring |
 | [information_scale.m](src/information_scale.m) | Calculate the generalized-entropy of a distribution over a number of scales using **scale.m**. | May 1997 | Jon Sporring |
 | [inf2spect.m](src/inf2spect.m) | Transform generalized-entropies to a multifractal spectrum. | May 1997 | Jon Sporring |
+| [local_information.m](src/local_information.m) |Calculate the local entropy map of an image|Jan 1996| Jon Sporring |
 | [spectrum.m](src/spectrum.m) | Calculate the multifractal spectrum a distribution using **inf2spect.m** and **information_scale.m**. | May 1997 | Jon Sporring |
 
 ### Contourc.m list functions
@@ -185,22 +193,15 @@ Old stuff yet to be organized.
 | File | Description | Date | Author |
 | --- | --- | --- | --- |
 | [distToSegment.m](src/distToSegment.m) |Eucledian distance to a line segment|Nov 2023| Jon Sporring |
-| [makeRandomTubes.m](src/makeRandomTubes.m) |generate a 3D image with non-overlapping random tubes|Nov 2023| Jon Sporring |
-| [makeTube.m](src/makeTube.m) |generate a 3D image of a filled tube with rounded endings|Nov 2023| Jon Sporring |
-| [randUnit3.m](src/randUnit3.m) |niformly and randomly distributed points on a sphere|Nov 2023| Jon Sporring |
-| [stretch.m](src/stretch.m) |Do a linear re-mapping of the values in a matrix|Jan 1997| Jon Sporring |
-| [sign2.m](src/sign2.m) |Alternative sign calculation.|Jan 1994| Jon Sporring |
 | [ppvalue.m](src/ppvalue.m) |Calculate the value of the j'th derivative of a piece-wise polynomial|Jan 1997| Jon Sporring |
 | [power2expand.m](src/power2expand.m) |Expand image to nearest higher power of 2 using imresize|Sep 1996| Jon Sporring |
 | [newtonvalue.m](src/newtonvalue.m) |Calculates the value of a polynomial on Newton form|Jan 1997| Jon Sporring |
-| [local_information.m](src/local_information.m) |Calculate the local entropy map of an image|Jan 1996| Jon Sporring |
 | [isophote.m](src/isophote.m) |return a list of vectors indicating the isophote curve beginning at X|Jan 1997| Jon Sporring |
 | [interval.m](src/interval.m) |Find which interval x belongs to in B|Jan 1997| Jon Sporring |
 | [int_to_binary.m](src/int_to_binary.m) |Convert an integer to binary form.|Jan 1994| Jon Sporring |
 | [interpolate.m](src/interpolate.m) |Does an interpolation of F values|Jan 1997| Jon Sporring |
 | [hamming_distance.m](src/hamming_distance.m) |The hamming distance between two binary matrices|Jan 1994| Jon Sporring |
 | [extract.m](src/extract.m) |Calculates a function as a list of points at V in L.|Jan 1997| Jon Sporring |
-| [extend.m](src/extend.m) |Periodic flip-extension of matrices|Sep 1996| Jon Sporring |
 | [divdiff.m](src/divdiff.m) |Calculates the divided differences vector for a polynomie in Newton form.|Jan 1997| Jon Sporring |
 | [chebyshevspace.m](src/chebyshevspace.m) |Calculates the Chebyshevs sampling points.|Jan 1997| Jon Sporring |
 | [binary_to_int.m](src/binary_to_int.m) |Convert a binary number into an integer|Jan 1994| Jon Sporring |
