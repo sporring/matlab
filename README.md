@@ -12,24 +12,25 @@ These functions have been developed to extend [Root Painter](https://github.com/
 
 | File | Description | Date | Author |
 | --- | --- | --- | --- |
-| [waitbarTxt](src/waitbarTxt.m) || Apr 2025 | Jon Sporring |
-| [multiplaneCombine.m](src/multiplaneCombine.m) || Apr 2025 | Jon Sporring |
-| [loadSeries.m](src/loadSeries.m) || Apr 2025 | Jon Sporring |
-| [splitSeries.m](src/splitSeries.m) || Apr 2025 | Jon Sporring |
-| [combineCoarseStructures.m](src/combineCoarseStructures.m) || Apr 2025 | Jon Sporring |
-| [addAnnotation.m](src/addAnnotation.m) || Apr 2025 | Jon Sporring |
-| [bestOfTwo.m](src/bestOfTwo.m) || Apr 2025 | Jon Sporring |
-| [saveSeries.m](src/saveSeries.m) || Apr 2025 | Jon Sporring |
-| [multiplaneSplit.m](src/multiplaneSplit.m) || Apr 2025 | Jon Sporring |
-| [randomSample.m](src/randomSample.m) || Apr 2025 | Jon Sporring |
-| [histogram2Quantile.m](src/histogram2Quantile.m) || Apr 2025 | Jon Sporring |
-| [combineThinStructures.m](src/combineThinStructures.m) || Apr 2025 | Jon Sporring |
-| [makeRandomFileName.m](src/makeRandomFileName.m) || Apr 2025 | Jon Sporring |
-| [seriesToMultipageTiff.m](src/seriesToMultipageTiff.m) || Apr 2025 | Jon Sporring |
-| [multipageTiffToSeries.m](src/multipageTiffToSeries.m) || Apr 2025 | Jon Sporring |
-| [trim.m](src/trim.m) || Apr 2025 | Jon Sporring |
-| [resample3.m](src/resample3.m) || Apr 2025 | Jon Sporring |
-| [mul.m](src/mul.m) || Apr 2025 | Jon Sporring |
+| [addAnnotation.m](src/addAnnotation.m) |Add an training-annotation pair to an existing root painter file structure| Apr 2025 | Jon Sporring |
+| [bestOfTwo.m](src/bestOfTwo.m) |perform pixelwise majority voting on logical arrays| Apr 2025 | Jon Sporring |
+| [combineCoarseStructures.m](src/combineCoarseStructures.m) |combine 3 equal size segmentations| Apr 2025 | Jon Sporring |
+| [combineThinStructures.m](src/combineThinStructures.m) |combine 3 equal size segmentations| Apr 2025 | Jon Sporring |
+| [loadSeries.m](src/loadSeries.m) |load a sequence of images| Apr 2025 | Jon Sporring |
+| [multiplaneCombine.m](src/multiplaneCombine.m) |combine orthogonal sliced 2d series into a single 3D image| Apr 2025 | Jon Sporring |
+| [multipageTiffToSeries.m](src/multipageTiffToSeries.m) |read a multipage tiff and save as a sequence of images| Apr 2025 | Jon Sporring |
+| [multiplaneSplit.m](src/multiplaneSplit.m) |reslice a 3d images into orthogonal 2d planes| Apr 2025 | Jon Sporring |
+| [saveSeries.m](src/saveSeries.m) |load a sequence of images| Apr 2025 | Jon Sporring |
+| [seriesToMultipageTiff.m](src/seriesToMultipageTiff.m) |read a sequence of images and save as a multipage tiff| Apr 2025 | Jon Sporring |
+| [splitSeries.m](src/splitSeries.m) |save an image into 3 orthogonal series| Apr 2025 | Jon Sporring |
+| --- | --- | --- | --- |
+| [makeRandomFileName.m](src/makeRandomFileName.m) |make a random, non-existing filename in path| Apr 2025 | Jon Sporring |
+| [randomSample.m](src/randomSample.m) |generate random samples distributed similarly to a histogram| Apr 2025 | Jon Sporring |
+| [histogram2Quantile.m](src/histogram2Quantile.m) |calcualte the p'th quantile from histogram bins and edges| Apr 2025 | Jon Sporring |
+| [trim.m](src/trim.m) |return the smallest axis aligne cube containing all true values in I| Apr 2025 | Jon Sporring |
+| [resample3.m](src/resample3.m) |resample I to become the size sz.| Apr 2025 | Jon Sporring |
+| [mul.m](src/mul.m) |multiply 3 dimensional images in the coordinates of the first argument| Apr 2025 | Jon Sporring |
+| [waitbarTxt](src/waitbarTxt.m) |print a wait progress bar in text| Apr 2025 | Jon Sporring |
 
 ### Linear Scale-Space functions
 
