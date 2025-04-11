@@ -17,17 +17,17 @@ These functions have been developed to extend [Root Painter](https://github.com/
 | [loadSeries.m](src/loadSeries.m) || Apr 2025 | Jon Sporring |
 | [splitSeries.m](src/splitSeries.m) || Apr 2025 | Jon Sporring |
 | [combineCoarseStructures.m](src/combineCoarseStructures.m) || Apr 2025 | Jon Sporring |
-|| [addAnnotation.m](src/addAnnotation.m) | Apr 2025 | Jon Sporring |
+| [addAnnotation.m](src/addAnnotation.m) || Apr 2025 | Jon Sporring |
 | [bestOfTwo.m](src/bestOfTwo.m) || Apr 2025 | Jon Sporring |
 | [saveSeries.m](src/saveSeries.m) || Apr 2025 | Jon Sporring |
 | [multiplaneSplit.m](src/multiplaneSplit.m) || Apr 2025 | Jon Sporring |
 | [randomSample.m](src/randomSample.m) || Apr 2025 | Jon Sporring |
 | [histogram2Quantile.m](src/histogram2Quantile.m) || Apr 2025 | Jon Sporring |
 | [combineThinStructures.m](src/combineThinStructures.m) || Apr 2025 | Jon Sporring |
-|| [makeRandomFileName.m](src/makeRandomFileName.m) | Apr 2025 | Jon Sporring |
+| [makeRandomFileName.m](src/makeRandomFileName.m) || Apr 2025 | Jon Sporring |
 | [seriesToMultipageTiff.m](src/seriesToMultipageTiff.m) || Apr 2025 | Jon Sporring |
-|| [multipageTiffToSeries.m](src/multipageTiffToSeries.m) | Apr 2025 | Jon Sporring |
-|| [trim.m](src/trim.m) | Apr 2025 | Jon Sporring |
+| [multipageTiffToSeries.m](src/multipageTiffToSeries.m) || Apr 2025 | Jon Sporring |
+| [trim.m](src/trim.m) || Apr 2025 | Jon Sporring |
 | [resample3.m](src/resample3.m) || Apr 2025 | Jon Sporring |
 | [mul.m](src/mul.m) || Apr 2025 | Jon Sporring |
 
@@ -176,3 +176,30 @@ These DIKU mex-functions require the DIKU image library to be compiled. Converse
 | [dikuread.c](src/dikuread.c) <br>[dikuread.m](src/dikuread.m) | Input a DIKU image from disk using **the DIKU library**. | Mar 1996 | Jon Sporring |
 | [dikuwrite.c](src/dikuwrite.c) <br>[dikuwrite.m](src/dikuwrite.m) | Output a DIKU image to disk using **the DIKU library**. | Mar 1996 | Jon Sporring |
 | [hipsread.c](src/hipsread.c) <br>[hipsread.m](src/hipsread.m) | Read a HIPS image from disk. | Oct 2000 | Jon Sporring |
+
+### Random stuff
+
+Old stuff yet to be organized.
+
+| File | Description | Date | Author |
+| --- | --- | --- | --- |
+| [distToSegment.m](src/distToSegment.m) ||| Jon Sporring |
+| [makeRandomTubes.m](src/makeRandomTubes.m) ||| Jon Sporring |
+| [makeTube.m](src/makeTube.m) ||| Jon Sporring |
+| [randUnit3.m](src/randUnit3.m) ||| Jon Sporring |
+| [stretch.m](src/stretch.m) ||| Jon Sporring |
+| [sign2.m](src/sign2.m) ||| Jon Sporring |
+| [ppvalue.m](src/ppvalue.m) ||| Jon Sporring |
+| [power2expand.m](src/power2expand.m) ||| Jon Sporring |
+| [newtonvalue.m](src/newtonvalue.m) ||| Jon Sporring |
+| [local_information.m](src/local_information.m) ||| Jon Sporring |
+| [isophote.m](src/isophote.m) ||| Jon Sporring |
+| [interval.m](src/interval.m) ||| Jon Sporring |
+| [int_to_binary.m](src/int_to_binary.m) ||| Jon Sporring |
+| [interpolate.m](src/interpolate.m) ||| Jon Sporring |
+| [hamming_distance.m](src/hamming_distance.m) ||| Jon Sporring |
+| [extract.m](src/extract.m) ||| Jon Sporring |
+| [extend.m](src/extend.m) ||| Jon Sporring |
+| [divdiff.m](src/divdiff.m) ||| Jon Sporring |
+| [chebyshevspace.m](src/chebyshevspace.m) ||| Jon Sporring |
+| [binary_to_int.m](src/binary_to_int.m) ||| Jon Sporring |
