@@ -35,6 +35,7 @@ These functions have are general purpose.
 | [trim.m](src/trim.m) |return the smallest axis aligne cube containing all true values in I| Apr 2025 | Jon Sporring |
 | [resample3.m](src/resample3.m) |resample I to become the size sz.| Apr 2025 | Jon Sporring |
 | [mul.m](src/mul.m) |multiply 3 dimensional images in the coordinates of the first argument| Apr 2025 | Jon Sporring |
+| [power2expand.m](src/power2expand.m) |Expand image to nearest higher power of 2 using imresize|Sep 1996| Jon Sporring |
 | [sign2.m](src/sign2.m) |Alternative sign calculation.|Jan 1994| Jon Sporring |
 | [stretch.m](src/stretch.m) |Do a linear re-mapping of the values in a matrix|Jan 1997| Jon Sporring |
 | [waitbarTxt](src/waitbarTxt.m) |print a wait progress bar in text| Apr 2025 | Jon Sporring |
@@ -186,6 +187,24 @@ These DIKU mex-functions require the DIKU image library to be compiled. Converse
 | [dikuwrite.c](src/dikuwrite.c) <br>[dikuwrite.m](src/dikuwrite.m) | Output a DIKU image to disk using **the DIKU library**. | Mar 1996 | Jon Sporring |
 | [hipsread.c](src/hipsread.c) <br>[hipsread.m](src/hipsread.m) | Read a HIPS image from disk. | Oct 2000 | Jon Sporring |
 
+### Sequence of binary digits
+
+Tools for simple experiements with numbers base 2
+
+| File | Description | Date | Author |
+| --- | --- | --- | --- |
+| [int_to_binary.m](src/int_to_binary.m) |Convert an integer to binary form.|Jan 1994| Jon Sporring |
+| [binary_to_int.m](src/binary_to_int.m) |Convert a binary number into an integer|Jan 1994| Jon Sporring |
+
+### Sequence of binary digits
+
+Tools for working with polynomials on Newton form
+
+| File | Description | Date | Author |
+| --- | --- | --- | --- |
+| [newtonvalue.m](src/newtonvalue.m) |Calculates the value of a polynomial on Newton form|Jan 1997| Jon Sporring |
+| [divdiff.m](src/divdiff.m) |Calculates the divided differences vector for a polynomie in Newton form.|Jan 1997| Jon Sporring |
+
 ### Random stuff
 
 Old stuff yet to be organized.
@@ -194,14 +213,9 @@ Old stuff yet to be organized.
 | --- | --- | --- | --- |
 | [distToSegment.m](src/distToSegment.m) |Eucledian distance to a line segment|Nov 2023| Jon Sporring |
 | [ppvalue.m](src/ppvalue.m) |Calculate the value of the j'th derivative of a piece-wise polynomial|Jan 1997| Jon Sporring |
-| [power2expand.m](src/power2expand.m) |Expand image to nearest higher power of 2 using imresize|Sep 1996| Jon Sporring |
-| [newtonvalue.m](src/newtonvalue.m) |Calculates the value of a polynomial on Newton form|Jan 1997| Jon Sporring |
 | [isophote.m](src/isophote.m) |return a list of vectors indicating the isophote curve beginning at X|Jan 1997| Jon Sporring |
 | [interval.m](src/interval.m) |Find which interval x belongs to in B|Jan 1997| Jon Sporring |
-| [int_to_binary.m](src/int_to_binary.m) |Convert an integer to binary form.|Jan 1994| Jon Sporring |
 | [interpolate.m](src/interpolate.m) |Does an interpolation of F values|Jan 1997| Jon Sporring |
 | [hamming_distance.m](src/hamming_distance.m) |The hamming distance between two binary matrices|Jan 1994| Jon Sporring |
 | [extract.m](src/extract.m) |Calculates a function as a list of points at V in L.|Jan 1997| Jon Sporring |
-| [divdiff.m](src/divdiff.m) |Calculates the divided differences vector for a polynomie in Newton form.|Jan 1997| Jon Sporring |
 | [chebyshevspace.m](src/chebyshevspace.m) |Calculates the Chebyshevs sampling points.|Jan 1997| Jon Sporring |
-| [binary_to_int.m](src/binary_to_int.m) |Convert a binary number into an integer|Jan 1994| Jon Sporring |
