@@ -184,23 +184,23 @@ Old stuff yet to be organized.
 
 | File | Description | Date | Author |
 | --- | --- | --- | --- |
-| [distToSegment.m](src/distToSegment.m) ||| Jon Sporring |
-| [makeRandomTubes.m](src/makeRandomTubes.m) ||| Jon Sporring |
-| [makeTube.m](src/makeTube.m) ||| Jon Sporring |
-| [randUnit3.m](src/randUnit3.m) ||| Jon Sporring |
-| [stretch.m](src/stretch.m) ||| Jon Sporring |
-| [sign2.m](src/sign2.m) ||| Jon Sporring |
-| [ppvalue.m](src/ppvalue.m) ||| Jon Sporring |
-| [power2expand.m](src/power2expand.m) ||| Jon Sporring |
-| [newtonvalue.m](src/newtonvalue.m) ||| Jon Sporring |
-| [local_information.m](src/local_information.m) ||| Jon Sporring |
-| [isophote.m](src/isophote.m) ||| Jon Sporring |
-| [interval.m](src/interval.m) ||| Jon Sporring |
-| [int_to_binary.m](src/int_to_binary.m) ||| Jon Sporring |
-| [interpolate.m](src/interpolate.m) ||| Jon Sporring |
-| [hamming_distance.m](src/hamming_distance.m) ||| Jon Sporring |
-| [extract.m](src/extract.m) ||| Jon Sporring |
-| [extend.m](src/extend.m) ||| Jon Sporring |
-| [divdiff.m](src/divdiff.m) ||| Jon Sporring |
-| [chebyshevspace.m](src/chebyshevspace.m) ||| Jon Sporring |
-| [binary_to_int.m](src/binary_to_int.m) ||| Jon Sporring |
+| [distToSegment.m](src/distToSegment.m) |Eucledian distance to a line segment|Nov 2023| Jon Sporring |
+| [makeRandomTubes.m](src/makeRandomTubes.m) |generate a 3D image with non-overlapping random tubes|Nov 2023| Jon Sporring |
+| [makeTube.m](src/makeTube.m) |generate a 3D image of a filled tube with rounded endings|Nov 2023| Jon Sporring |
+| [randUnit3.m](src/randUnit3.m) |niformly and randomly distributed points on a sphere|Nov 2023| Jon Sporring |
+| [stretch.m](src/stretch.m) |Do a linear re-mapping of the values in a matrix|Jan 1997| Jon Sporring |
+| [sign2.m](src/sign2.m) |Alternative sign calculation.|Jan 1994| Jon Sporring |
+| [ppvalue.m](src/ppvalue.m) |Calculate the value of the j'th derivative of a piece-wise polynomial|Jan 1997| Jon Sporring |
+| [power2expand.m](src/power2expand.m) |Expand image to nearest higher power of 2 using imresize|Sep 1996| Jon Sporring |
+| [newtonvalue.m](src/newtonvalue.m) |Calculates the value of a polynomial on Newton form|Jan 1997| Jon Sporring |
+| [local_information.m](src/local_information.m) |Calculate the local entropy map of an image|Jan 1996| Jon Sporring |
+| [isophote.m](src/isophote.m) |return a list of vectors indicating the isophote curve beginning at X|Jan 1997| Jon Sporring |
+| [interval.m](src/interval.m) |Find which interval x belongs to in B|Jan 1997| Jon Sporring |
+| [int_to_binary.m](src/int_to_binary.m) |Convert an integer to binary form.|Jan 1994| Jon Sporring |
+| [interpolate.m](src/interpolate.m) |Does an interpolation of F values|Jan 1997| Jon Sporring |
+| [hamming_distance.m](src/hamming_distance.m) |The hamming distance between two binary matrices|Jan 1994| Jon Sporring |
+| [extract.m](src/extract.m) |Calculates a function as a list of points at V in L.|Jan 1997| Jon Sporring |
+| [extend.m](src/extend.m) |Periodic flip-extension of matrices|Sep 1996| Jon Sporring |
+| [divdiff.m](src/divdiff.m) |Calculates the divided differences vector for a polynomie in Newton form.|Jan 1997| Jon Sporring |
+| [chebyshevspace.m](src/chebyshevspace.m) |Calculates the Chebyshevs sampling points.|Jan 1997| Jon Sporring |
+| [binary_to_int.m](src/binary_to_int.m) |Convert a binary number into an integer|Jan 1994| Jon Sporring |
